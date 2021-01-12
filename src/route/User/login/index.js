@@ -1,9 +1,3 @@
-// const client = require("../../modules/redis");
-const Joi = require("joi");
-// const mysql = require("../../modules/mysql");
-// const jwt = require('jsonwebtoken');
-// const UNIQUE_TOKEN = require('../../../config/config.json')
-const User = require("../../../model/User");
 const schema = require("../validateSchema/schemaLogin");
 const serviceLogin = require("../../../services/User/login");
 async function login(req, res) {

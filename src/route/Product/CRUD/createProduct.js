@@ -5,7 +5,8 @@ const schema = require("../validateSchema/schemaCreate");
 
 function createProduct(req, res) {
   try {
-    const dataParam = JSON.parse(req.query.collection);
+    const dataParam = req.body.collection; // req.body
+    // console.log(dataParam)
     dataParam.forEach((obj, i) => {
       const validation = schema.validate(obj[i]);
       if (validation.error) {

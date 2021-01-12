@@ -24,7 +24,9 @@ morganBody(app, {
 });
 
 const user = require("./User");
+
 const product = require("./Product")
+
 app.use("/user", user);
 app.use("/product", product)
 

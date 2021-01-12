@@ -10,11 +10,11 @@ async function updateProduct(req, res) {
     price: req.param("price"),
     category: req.param("category"),
   };
-  const collectionData = req.query.collection;
+  
+  const collectionData = req.body.collection; // req.body
 
   if (collectionData) {
-    const multiParam = JSON.parse(collectionData);
-    serviceMultipleUpdate(multiParam, dataParam.price, req, res);
+    serviceMultipleUpdate(collectionData, dataParam.price, req, res);
   } else {
     serviceSingleUpdate(
       dataParam.id,

@@ -4,8 +4,8 @@ const Joi = require("joi");
 const serviceReadByID = require("../../../services/Product/read/idRead");
 const serviceReadAll = require("../../../services/Product/read/allRead");
 async function readProduct(req, res) {
-  
-  const paramArrayID = req.query.id;
+  // const a = req.param("asdasd")
+  const paramArrayID = req.query.id; // req.body
 
   if (paramArrayID) {
     const arrayID = JSON.parse(req.query.id);
